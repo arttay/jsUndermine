@@ -1,0 +1,16 @@
+.avatar {
+	float: left;
+}
+.stats {
+	margin-top: 15px;
+	float: right;
+}
+.output {
+	width: 20%;
+}
+.race, .spec {
+	display: inline;
+}
+.race {
+	margin-right: 5px;
+}
