@@ -139,22 +139,96 @@ function setDown(data, stats) {
 			name: data.name,
 			race: data.race,
 			rel: data.realm,
-			thumb: "http://lorempixel.com/150/150/",
+			//thumb: "http://lorempixel.com/150/150/",
 			spec: data.talents[0].spec.name,
 			specIcon: data.talents[0].spec.icon,
-
-			//thumb: data.thumbnail,
+			hit: Math.floor(data.stats.hitPercent),
+			haste: Math.floor(data.stats.hasteRating),
+			crit: Math.floor(data.stats.crit),
+			thumb: "http://us.battle.net/static-render/us/"+data.thumbnail,
 		};
 		console.log(data);
 		var objectSize = Object.keys(data.items).length;
 		stats.hit = Math.floor(data.stats.hitPercent);
 			switch(data.class) {
-				case 8: 
-					stats.hit = Math.floor(data.stats.hitPercent);
-					stats.haste = Math.floor(data.stats.hasteRating);
-					stats.crit = Math.floor(data.stats.crit);
-				
+				case 1: 
+					stats.class = "Warrior";
 				break;
+				case 2: 
+					stats.class = "Paladin";
+				break;
+				case 3: 
+					stats.class = "Hunter";
+				break;
+				case 4: 
+					stats.class = "Rogue";
+				break;
+				case 5: 
+					stats.class = "Priest";
+				break;
+				case 6: 
+					stats.class = "Death Knight";
+				break;
+				case 7: 
+					stats.class = "Shaman";
+				break;
+				case 8: 
+					stats.class = "Mage";
+				break;
+				case 9: 
+					stats.class = "Warlock";
+				break;
+				case 10: 
+					stats.class = "Monk";
+				break;
+				case 11: 
+					stats.class = "Druid ";
+				break;
+			}
+			switch(data.race) {
+				case 5:
+					stats.race = "Tauren";
+					break;
+				case 5:
+					stats.race = "Undead";
+					break;
+				case 2:
+				stats.race = "Orc";
+					break;
+				case 7:
+				stats.race = "Gnome";
+					break;
+				case 9:
+				stats.race = "Goblin";
+					break;
+				case 1:
+				stats.race = "Human";
+					break;
+				case 8:
+				stats.race = "Troll";
+					break;
+				case 24:
+				stats.race = "Pandaren";
+					break;
+				case 11:
+				stats.race = "Draenei";
+					break;
+				case 22:
+				stats.race = "Worgen";
+					break;
+				case 10:
+				stats.race = "Blood Elf";
+					break;
+				case 4:
+				stats.race = "Night Elf";
+					break;
+				case 3:
+				stats.race = "Dwarf";
+					break;
+				case 25:
+				stats.race = "Pandaren";
+					break;
+				case 26:
 			}
 		if (objectSize < 17) {
 			
