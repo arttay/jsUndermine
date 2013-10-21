@@ -6,11 +6,14 @@
 	float: right;
 }
 .output {
-	width: 20%;
+	width: 30%;
 }
 .race, .spec {
 	display: inline;
 }
 .race {
 	margin-right: 5px;
+}
+.avatar {
+	width: 50%;
 }
