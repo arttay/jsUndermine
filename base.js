@@ -44,8 +44,8 @@
 			
 					
 						$.test({
-							name: player.name,
-							rel: player.rel,
+							name: "usiris", //player.name,
+							rel:  "mannoroth",  //player.rel,
 						});//fire plugin
 		event.preventDefault();
 	}//end onsubmit
