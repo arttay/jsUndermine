@@ -21,15 +21,7 @@
 			haste: $(".haste").val(),
 			unenchant: $(".unenchant").val(),
 		};
-		if(options.haste == 0) {
-			//fail option
-			console.log("=0"+ options.haste)
-		}
-		else {
-			//pass option
-			console.log("else"+options.haste)
-		}
-		
+	
 		//http://us.battle.net/api/wow/character/Mannoroth/Usiris?fields=items
 				/*$.ajax({
 				    type: 'GET', 
