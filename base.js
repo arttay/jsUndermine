@@ -36,8 +36,8 @@
 			
 					
 						$.test({
-							name: "usiris", //player.name,
-							rel:  "mannoroth",  //player.rel,
+							name: "leica", //player.name,
+							rel:  "alexstrasza",  //player.rel,
 						});//fire plugin
 		event.preventDefault();
 	}//end onsubmit

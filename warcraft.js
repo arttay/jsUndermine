@@ -187,7 +187,7 @@ var chcek = null; //used to return, keep null
 				if(typeof(item) === 'object') {//drills to items object then checks each property in that if it is an object
 					itemID = item.id;//sets itemID to the id of the object, why is this here?
 						//console.log(stats);
-						(function(stats) {
+						(function(stats, charData) {
 												
 						$.ajax({
 								
@@ -209,13 +209,19 @@ var chcek = null; //used to return, keep null
 								      //used as a 404 pag, not working yet
 								  }
 								    },
+								    complete: function(){
+								    	console.log("complete " +stats.pass);
+								    },
 								  
 								    
 								
 					 		   jsonp: 'jsonp'
 							}).responseText;//end ajax
-						console.log(stats);
-												})(stats);
+						//console.log(stats);
+					if(stats.pass == false) {
+						console.log("after ajax fail");
+					}
+												})(stats, charData);
 																//console.log(testmeh);
 
 						
@@ -224,7 +230,7 @@ var chcek = null; //used to return, keep null
 		}//end for
 
 		function queryItem(data, charData, stats) {
-			console.log(this.custom);
+			console.log(charData);
 		//console.log(g); //data checking
 			var realID = data.id; //cheche id for the id of the item that is being passed to the function 
 			var baseItem = charData.items; //chache base for loop
@@ -277,9 +283,15 @@ var chcek = null; //used to return, keep null
 								
 								if(objectSize == gem0.length) {
 									stats.pass = false;
-									console.log("0: " + charName+ " "+ stats.pass);
+									console.log("queryItem fail");
+									//console.log("0: " + charName+ " "+ stats.pass);
 									
 									//setDown(data, stats, options)
+								}
+								else 
+								{
+									stats.pass = true;
+									//console.log("0: " + charName+ " "+ stats.pass);
 								}
 								
 
