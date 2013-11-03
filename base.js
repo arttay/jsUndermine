@@ -15,10 +15,14 @@
 		};
 
 			
-					$.test({
+				$.test({
+							name: player.name, //player.name,
+							rel:  player.rel,  //player.rel,
+						});//fire plugin/
+					/*$.test({
 							name: "usiris", //player.name,
 							rel:  "Mannoroth",  //player.rel,
-						});//fire plugin
+						});//fire plugin*/
 
 						/*$.test({
 							name: "leica", //player.name,
