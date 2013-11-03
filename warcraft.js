@@ -1,3 +1,15 @@
+/****************************************************************
+								Warcraft
+								Art Taylor
+
+
+						This grabs a players data and checks if 
+						they have enchants and gems.
+
+
+
+
+****************************************************************/
 (function($) {
 
     $.test = function(options) {
@@ -58,7 +70,7 @@ var chcek = null; //used to return, keep null
 			name: data.name,
 			race: data.race,
 			rel: data.realm,
-			thumb: "http://lorempixel.com/150/150/",
+			//thumb: "http://lorempixel.com/150/150/",
 			spec: data.talents[0].spec.name,
 			specIcon: data.talents[0].spec.icon,
 			hit: Math.floor(dStats.hitPercent),
@@ -68,7 +80,7 @@ var chcek = null; //used to return, keep null
 			str: Math.floor(dStats.str),
 			sp: dStats.spellPower, 
 			pass: false,
-			//thumb: "http://us.battle.net/static-render/us/"+data.thumbnail,
+			thumb: "http://us.battle.net/static-render/us/"+data.thumbnail,
 		};
 		
 
@@ -157,16 +169,16 @@ var chcek = null; //used to return, keep null
 	//	console.log("ehcnat array "+newEnchant.length);
 		if(newEnchant.length < 9){
 			//if new enchant is less than 9, the player has less than 9 items on atm
-			//console.log("nope");
+			console.log("nope");
 
 			stats.pass = false;
 		}
 		else {
 			stats.pass = true;
 			//console.log(newEnchant);
-			
 		}
-		checkGems(data, stats)
+		//checkGems(data, stats)
+		setDown(data, stats);
 	}//end check enchant
 
 
@@ -223,9 +235,6 @@ var chcek = null; //used to return, keep null
 					}
 												})(stats, charData);
 																//console.log(testmeh);
-
-						
-				
 				}//end if
 		}//end for
 
